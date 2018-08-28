@@ -1,4 +1,3 @@
----
 swagger: "2.0"
 x-collection-name: Eventbrite
 x-complete: 1
@@ -275,4 +274,3 @@ paths:
       tags:
       - Organizer
       - Update
----

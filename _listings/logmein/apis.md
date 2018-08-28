@@ -8,8 +8,8 @@ image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-
 x-kinRank: "7"
 x-alexaRank: "7271"
 tags: Organizers
-created: "2018-08-26"
-modified: "2018-08-26"
+created: "2018-08-28"
+modified: "2018-08-28"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/apis.md
 specificationVersion: "0.14"
 apis:
@@ -92,6 +92,36 @@ apis:
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizers-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizers-get-openapi.md
+- name: GoToMeeting - Organizer
+  x-api-slug: organizers-post
+  description: "Creates a new organizer and sends an email to the email address defined
+    in the request. This API call is only available to users with the admin role.
+    You may also pass 'G2W' or 'G2T' or 'OPENVOICE' as productType, to create organizers
+    for those products. A G2W or G2T organizer will also have access to G2M.\r\n\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\tfield\t\t\tvalue\t\t\tdescription\t\t\r\n\t\t\"firstName\"\t\t\t\"First\"\t\t\tString
+    - max 25 characters\t\t\r\n\t\t\"lastName\"\t\t\t\"Last\"\t\t\tString - max 25
+    characters\t\t\r\n\t\t\"organizerEmail\"\t\t\t\"valid.org@email.com\"\t\t\tString
+    with valid email syntax\t\t\r\n\t\t\"productType\"\t\t\t\"G2M\"\t\t\tMust be:
+    G2M, G2W, G2T, OV"
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2M/rest
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizers-post-openapi.md
+- name: GoToMeeting - Organizer by email
+  x-api-slug: organizers-delete
+  description: Deletes the individual organizer specified by the email address. This
+    API call is only available to users with the admin role.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2M/rest
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizers-delete-openapi.md
 - name: GoToMeeting - Attendees by organizer
   x-api-slug: organizersorganizerkeyattendees-get
   description: Lists all attendees for all meetings within a specified date range
@@ -107,6 +137,24 @@ apis:
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizersorganizerkeyattendees-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizersorganizerkeyattendees-get-openapi.md
+- name: GoToMeeting - Organizer in group
+  x-api-slug: groupsgroupkeyorganizers-post
+  description: "Creates a new organizer and sends an email to the email address defined
+    in request. This API call is only available to users with the admin role. You
+    may also pass 'G2W' or 'G2T' or 'OPENVOICE' as productType variables, creating
+    organizers for those products. A G2W or G2T organizer will also have access to
+    G2M.\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\tfield\t\t\tvalue\t\t\tdescription\t\t\r\n\t\t\"organizerEmail\"\t\t\t\"valid.org@email.com\"\t\t\tString
+    with valid email syntax\t\t\r\n\t\t\"firstName\"\t\t\t\"First\"\t\t\tString -
+    max 25 characters\t\t\r\n\t\t\"lastName\"\t\t\t\"Last\"\t\t\tString - max 25 characters\t\t\r\n\t\t\"productType\"\t\t\t\"G2M\"\t\t\tMust
+    be: G2M, G2W, G2T, OV"
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2M/rest
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/groupsgroupkeyorganizers-post-openapi.md
 - name: GoToMeeting - Historical meetings by organizer
   x-api-slug: organizersorganizerkeyhistoricalmeetings-get
   description: Get historical meetings for the specified organizer that started within
@@ -122,6 +170,101 @@ apis:
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizersorganizerkeyhistoricalmeetings-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizersorganizerkeyhistoricalmeetings-get-openapi.md
+- name: GoToMeeting - Organizer
+  x-api-slug: organizersorganizerkey-get
+  description: Gets the individual organizer specified by the organizer's email address.
+    If an email address is not specified, all organizers are returned. This API call
+    is only available to users with the admin role.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2M/rest
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizersorganizerkey-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizersorganizerkey-get-openapi.md
+- name: GoToMeeting - Organizer
+  x-api-slug: organizersorganizerkey-put
+  description: "Updates the products of the specified organizer. To add a product
+    (G2M, G2W, G2T, OPENVOICE) for the organizer, the call must be sent once for each
+    product you want to add. To remove all products for the organizer, set status
+    to 'suspended'. The call is limited to users with the admin role.\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\tfield\t\t\tvalue\t\t\tdescription\t\t\r\n\t\t\"firstName\"\t\t\t\"First\"\t\t\tString
+    - max 25 characters\t\t\r\n\t\t\"lastName\"\t\t\t\"Last\"\t\t\tString - max 25
+    characters\t\t\r\n\t\t\"organizerEmail\"\t\t\t\"valid.org@email.com\"\t\t\tString
+    with valid email syntax\t\t\r\n\t\t\"productType\"\t\t\t\"G2M\"\t\t\tMust be:
+    G2M, G2W, G2T, OV\t\t\r\n\t\t\"status\"\t\t\t\"suspended\"\t\t\tMust be: blank
+    or suspended"
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2M/rest
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizersorganizerkey-put-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizersorganizerkey-put-openapi.md
+- name: GoToMeeting - Organizer
+  x-api-slug: organizersorganizerkey-delete
+  description: Deletes the individual organizer specified by the organizer key. This
+    API call is only available to users with the admin role.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2M/rest
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizersorganizerkey-delete-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizersorganizerkey-delete-openapi.md
+- name: GoToMeeting - Organizer by email
+  x-api-slug: organizers-get
+  description: Gets the individual organizer specified by the organizer's email address.
+    If an email address is not specified, all organizers are returned. This API call
+    is only available to users with the admin role.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2M/rest
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizers-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizers-get-openapi.md
+- name: GoToMeeting - Organizer
+  x-api-slug: organizers-post
+  description: "Creates a new organizer and sends an email to the email address defined
+    in the request. This API call is only available to users with the admin role.
+    You may also pass 'G2W' or 'G2T' or 'OPENVOICE' as productType, to create organizers
+    for those products. A G2W or G2T organizer will also have access to G2M.\r\n\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\tfield\t\t\tvalue\t\t\tdescription\t\t\r\n\t\t\"firstName\"\t\t\t\"First\"\t\t\tString
+    - max 25 characters\t\t\r\n\t\t\"lastName\"\t\t\t\"Last\"\t\t\tString - max 25
+    characters\t\t\r\n\t\t\"organizerEmail\"\t\t\t\"valid.org@email.com\"\t\t\tString
+    with valid email syntax\t\t\r\n\t\t\"productType\"\t\t\t\"G2M\"\t\t\tMust be:
+    G2M, G2W, G2T, OV"
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2M/rest
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizers-post-openapi.md
+- name: GoToMeeting - Organizer by email
+  x-api-slug: organizers-delete
+  description: Deletes the individual organizer specified by the email address. This
+    API call is only available to users with the admin role.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2M/rest
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizers-delete-openapi.md
 - name: GoToMeeting - Attendees by organizer
   x-api-slug: organizersorganizerkeyattendees-get
   description: Lists all attendees for all meetings within a specified date range
@@ -137,6 +280,24 @@ apis:
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizersorganizerkeyattendees-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizersorganizerkeyattendees-get-openapi.md
+- name: GoToMeeting - Organizer in group
+  x-api-slug: groupsgroupkeyorganizers-post
+  description: "Creates a new organizer and sends an email to the email address defined
+    in request. This API call is only available to users with the admin role. You
+    may also pass 'G2W' or 'G2T' or 'OPENVOICE' as productType variables, creating
+    organizers for those products. A G2W or G2T organizer will also have access to
+    G2M.\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\tfield\t\t\tvalue\t\t\tdescription\t\t\r\n\t\t\"organizerEmail\"\t\t\t\"valid.org@email.com\"\t\t\tString
+    with valid email syntax\t\t\r\n\t\t\"firstName\"\t\t\t\"First\"\t\t\tString -
+    max 25 characters\t\t\r\n\t\t\"lastName\"\t\t\t\"Last\"\t\t\tString - max 25 characters\t\t\r\n\t\t\"productType\"\t\t\t\"G2M\"\t\t\tMust
+    be: G2M, G2W, G2T, OV"
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2M/rest
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/groupsgroupkeyorganizers-post-openapi.md
 - name: GoToMeeting - Historical meetings by organizer
   x-api-slug: organizersorganizerkeyhistoricalmeetings-get
   description: Get historical meetings for the specified organizer that started within
@@ -152,6 +313,329 @@ apis:
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizersorganizerkeyhistoricalmeetings-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizersorganizerkeyhistoricalmeetings-get-openapi.md
+- name: GoToMeeting - Historical meetings by organizer
+  x-api-slug: organizersorganizerkeyhistoricalmeetings-get
+  description: Get historical meetings for the specified organizer that started within
+    the specified date/time range. Meetings which are still ongoing at the time of
+    the request are not included in the result.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2M/rest
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizersorganizerkeyhistoricalmeetings-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizersorganizerkeyhistoricalmeetings-get-openapi.md
+- name: GoToMeeting - Historical meetings by organizer
+  x-api-slug: organizersorganizerkeyhistoricalmeetings-get
+  description: Get historical meetings for the specified organizer that started within
+    the specified date/time range. Meetings which are still ongoing at the time of
+    the request are not included in the result.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2M/rest
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizersorganizerkeyhistoricalmeetings-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizersorganizerkeyhistoricalmeetings-get-openapi.md
+- name: GoToMeeting - Organizer in group
+  x-api-slug: groupsgroupkeyorganizers-post
+  description: "Creates a new organizer and sends an email to the email address defined
+    in request. This API call is only available to users with the admin role. You
+    may also pass 'G2W' or 'G2T' or 'OPENVOICE' as productType variables, creating
+    organizers for those products. A G2W or G2T organizer will also have access to
+    G2M.\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\tfield\t\t\tvalue\t\t\tdescription\t\t\r\n\t\t\"organizerEmail\"\t\t\t\"valid.org@email.com\"\t\t\tString
+    with valid email syntax\t\t\r\n\t\t\"firstName\"\t\t\t\"First\"\t\t\tString -
+    max 25 characters\t\t\r\n\t\t\"lastName\"\t\t\t\"Last\"\t\t\tString - max 25 characters\t\t\r\n\t\t\"productType\"\t\t\t\"G2M\"\t\t\tMust
+    be: G2M, G2W, G2T, OV"
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2M/rest
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/groupsgroupkeyorganizers-post-openapi.md
+- name: GoToMeeting - Organizer in group
+  x-api-slug: groupsgroupkeyorganizers-post
+  description: "Creates a new organizer and sends an email to the email address defined
+    in request. This API call is only available to users with the admin role. You
+    may also pass 'G2W' or 'G2T' or 'OPENVOICE' as productType variables, creating
+    organizers for those products. A G2W or G2T organizer will also have access to
+    G2M.\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\tfield\t\t\tvalue\t\t\tdescription\t\t\r\n\t\t\"organizerEmail\"\t\t\t\"valid.org@email.com\"\t\t\tString
+    with valid email syntax\t\t\r\n\t\t\"firstName\"\t\t\t\"First\"\t\t\tString -
+    max 25 characters\t\t\r\n\t\t\"lastName\"\t\t\t\"Last\"\t\t\tString - max 25 characters\t\t\r\n\t\t\"productType\"\t\t\t\"G2M\"\t\t\tMust
+    be: G2M, G2W, G2T, OV"
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2M/rest
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/groupsgroupkeyorganizers-post-openapi.md
+- name: GoToMeeting - Attendees by organizer
+  x-api-slug: organizersorganizerkeyattendees-get
+  description: Lists all attendees for all meetings within a specified date range
+    for a specified organizer. This API call is only available to users with the admin
+    role.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2M/rest
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizersorganizerkeyattendees-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizersorganizerkeyattendees-get-openapi.md
+- name: GoToMeeting - Attendees by organizer
+  x-api-slug: organizersorganizerkeyattendees-get
+  description: Lists all attendees for all meetings within a specified date range
+    for a specified organizer. This API call is only available to users with the admin
+    role.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2M/rest
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizersorganizerkeyattendees-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizersorganizerkeyattendees-get-openapi.md
+- name: GoToMeeting - Organizer by email
+  x-api-slug: organizers-delete
+  description: Deletes the individual organizer specified by the email address. This
+    API call is only available to users with the admin role.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2M/rest
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizers-delete-openapi.md
+- name: GoToMeeting - Organizer by email
+  x-api-slug: organizers-delete
+  description: Deletes the individual organizer specified by the email address. This
+    API call is only available to users with the admin role.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2M/rest
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizers-delete-openapi.md
+- name: GoToMeeting - Organizer
+  x-api-slug: organizers-post
+  description: "Creates a new organizer and sends an email to the email address defined
+    in the request. This API call is only available to users with the admin role.
+    You may also pass 'G2W' or 'G2T' or 'OPENVOICE' as productType, to create organizers
+    for those products. A G2W or G2T organizer will also have access to G2M.\r\n\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\tfield\t\t\tvalue\t\t\tdescription\t\t\r\n\t\t\"firstName\"\t\t\t\"First\"\t\t\tString
+    - max 25 characters\t\t\r\n\t\t\"lastName\"\t\t\t\"Last\"\t\t\tString - max 25
+    characters\t\t\r\n\t\t\"organizerEmail\"\t\t\t\"valid.org@email.com\"\t\t\tString
+    with valid email syntax\t\t\r\n\t\t\"productType\"\t\t\t\"G2M\"\t\t\tMust be:
+    G2M, G2W, G2T, OV"
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2M/rest
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizers-post-openapi.md
+- name: GoToMeeting - Organizer
+  x-api-slug: organizers-post
+  description: "Creates a new organizer and sends an email to the email address defined
+    in the request. This API call is only available to users with the admin role.
+    You may also pass 'G2W' or 'G2T' or 'OPENVOICE' as productType, to create organizers
+    for those products. A G2W or G2T organizer will also have access to G2M.\r\n\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\tfield\t\t\tvalue\t\t\tdescription\t\t\r\n\t\t\"firstName\"\t\t\t\"First\"\t\t\tString
+    - max 25 characters\t\t\r\n\t\t\"lastName\"\t\t\t\"Last\"\t\t\tString - max 25
+    characters\t\t\r\n\t\t\"organizerEmail\"\t\t\t\"valid.org@email.com\"\t\t\tString
+    with valid email syntax\t\t\r\n\t\t\"productType\"\t\t\t\"G2M\"\t\t\tMust be:
+    G2M, G2W, G2T, OV"
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2M/rest
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizers-post-openapi.md
+- name: GoToMeeting - Organizer by email
+  x-api-slug: organizers-get
+  description: Gets the individual organizer specified by the organizer's email address.
+    If an email address is not specified, all organizers are returned. This API call
+    is only available to users with the admin role.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2M/rest
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizers-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizers-get-openapi.md
+- name: GoToMeeting - Organizer by email
+  x-api-slug: organizers-get
+  description: Gets the individual organizer specified by the organizer's email address.
+    If an email address is not specified, all organizers are returned. This API call
+    is only available to users with the admin role.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2M/rest
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizers-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizers-get-openapi.md
+- name: GoToMeeting - Organizer
+  x-api-slug: organizersorganizerkey-delete
+  description: Deletes the individual organizer specified by the organizer key. This
+    API call is only available to users with the admin role.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2M/rest
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizersorganizerkey-delete-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizersorganizerkey-delete-openapi.md
+- name: GoToMeeting - Organizer
+  x-api-slug: organizersorganizerkey-delete
+  description: Deletes the individual organizer specified by the organizer key. This
+    API call is only available to users with the admin role.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2M/rest
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizersorganizerkey-delete-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizersorganizerkey-delete-openapi.md
+- name: GoToMeeting - Organizer
+  x-api-slug: organizersorganizerkey-put
+  description: "Updates the products of the specified organizer. To add a product
+    (G2M, G2W, G2T, OPENVOICE) for the organizer, the call must be sent once for each
+    product you want to add. To remove all products for the organizer, set status
+    to 'suspended'. The call is limited to users with the admin role.\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\tfield\t\t\tvalue\t\t\tdescription\t\t\r\n\t\t\"firstName\"\t\t\t\"First\"\t\t\tString
+    - max 25 characters\t\t\r\n\t\t\"lastName\"\t\t\t\"Last\"\t\t\tString - max 25
+    characters\t\t\r\n\t\t\"organizerEmail\"\t\t\t\"valid.org@email.com\"\t\t\tString
+    with valid email syntax\t\t\r\n\t\t\"productType\"\t\t\t\"G2M\"\t\t\tMust be:
+    G2M, G2W, G2T, OV\t\t\r\n\t\t\"status\"\t\t\t\"suspended\"\t\t\tMust be: blank
+    or suspended"
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2M/rest
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizersorganizerkey-put-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizersorganizerkey-put-openapi.md
+- name: GoToMeeting - Organizer
+  x-api-slug: organizersorganizerkey-put
+  description: "Updates the products of the specified organizer. To add a product
+    (G2M, G2W, G2T, OPENVOICE) for the organizer, the call must be sent once for each
+    product you want to add. To remove all products for the organizer, set status
+    to 'suspended'. The call is limited to users with the admin role.\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\tfield\t\t\tvalue\t\t\tdescription\t\t\r\n\t\t\"firstName\"\t\t\t\"First\"\t\t\tString
+    - max 25 characters\t\t\r\n\t\t\"lastName\"\t\t\t\"Last\"\t\t\tString - max 25
+    characters\t\t\r\n\t\t\"organizerEmail\"\t\t\t\"valid.org@email.com\"\t\t\tString
+    with valid email syntax\t\t\r\n\t\t\"productType\"\t\t\t\"G2M\"\t\t\tMust be:
+    G2M, G2W, G2T, OV\t\t\r\n\t\t\"status\"\t\t\t\"suspended\"\t\t\tMust be: blank
+    or suspended"
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2M/rest
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizersorganizerkey-put-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizersorganizerkey-put-openapi.md
+- name: GoToMeeting - Organizer
+  x-api-slug: organizersorganizerkey-get
+  description: Gets the individual organizer specified by the organizer's email address.
+    If an email address is not specified, all organizers are returned. This API call
+    is only available to users with the admin role.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2M/rest
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizersorganizerkey-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizersorganizerkey-get-openapi.md
+- name: GoToMeeting - Organizer
+  x-api-slug: organizersorganizerkey-get
+  description: Gets the individual organizer specified by the organizer's email address.
+    If an email address is not specified, all organizers are returned. This API call
+    is only available to users with the admin role.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2M/rest
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizersorganizerkey-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizersorganizerkey-get-openapi.md
+- name: GoToTraining API - Update Training Organizers
+  x-api-slug: organizersorganizerkeytrainingstrainingkeyorganizers-put
+  description: Update training organizers.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2T/rest
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizersorganizerkeytrainingstrainingkeyorganizers-put-openapi.md
+- name: GoToWebinar API - Get organizer sessions
+  x-api-slug: organizerkeysessions-get
+  description: Get organizer sessions.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2W/rest/organizers
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizerkeysessions-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizerkeysessions-get-openapi.md
+- name: GoToWebinar API - Get organizer sessions
+  x-api-slug: organizerkeysessions-get
+  description: Get organizer sessions.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2W/rest/organizers
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizerkeysessions-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/organizers/master/_listings/logmein/organizerkeysessions-get-openapi.md
 - name: GoToWebinar API - Get organizer sessions
   x-api-slug: organizerkeysessions-get
   description: Get organizer sessions.
